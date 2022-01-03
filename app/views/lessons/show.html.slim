@@ -1,0 +1,13 @@
+p#notice = notice
+
+p
+  strong Lesson:
+  = @lesson.lesson_id
+
+p
+  strong Description:
+  = @lesson.description
+
+=> link_to 'Edit', edit_lesson_path(@lesson)
+'|
+=< link_to 'Back', lessons_path

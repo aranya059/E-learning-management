@@ -13,3 +13,18 @@
  *= require_tree .
  *= require_self
  */
+.course{
+    color: #49B8B0;
+    width: 200px;
+    height: 100px;
+}
+.lesson{
+    color: #BBBBBB;
+    width: 200px;
+    height: 100px;
+}
+.question{
+    color: #A3C1AD;
+    width: 200px;
+    height: 100px;
+}
