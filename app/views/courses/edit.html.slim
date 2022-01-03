@@ -1,0 +1,28 @@
+.row
+  .col-12
+    .card.card-default
+      = simple_form_for @course, html: { class: 'form' } do |f|
+        .card-header.card-header-border-bottom.d-flex.justify-content-between
+          h2 Edit Course
+
+          fieldset.form-group
+            label Course ID
+            = f.number_field :course_id,
+                      class: 'form-control form-control-sm input-sm'
+
+          fieldset.form-group
+            label Title
+            = f.text_field :title, steps: :any,
+                      class: 'form-control form-control-sm input-sm'
+
+          fieldset.form-group
+            label Description
+            = f.text_field :description,
+                      class: 'form-control form-control-sm input-sm'
+
+          .form-footer.mt-4.pt-2.border-top
+            = button_tag type: 'submit', class: 'button btn btn-sm btn-primary'
+              i class = " mdi #{ @course.persisted? ? 'mdi-arrow-up-bold-circle' : 'mdi-content-save'} mt-0 mr-2" role="status"
+              span.spinner-border.spinner-border-sm.mr-2.d-none aria-hidden="true" role="status"
+              span = @course.persisted? ? 'Update' :'Save'
+
